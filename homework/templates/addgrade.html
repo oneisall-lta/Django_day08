@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加班级</title>
+</head>
+<body>
+<h3>添加班级</h3>
+
+<form method="post" action="/homework/addgrade/">
+    <input type="text" name="grade">
+    <input type="submit" value="添加">
+    <a href="{% url 'homework:gostu' %}">添加学生</a>
+</form>
+
+</body>
+</html>
