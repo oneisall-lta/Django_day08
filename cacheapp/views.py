@@ -4,8 +4,8 @@ from cacheapp.models import Cake
 
 
 def memcached_getdata(request, cake_id):
-    mc = memcache.Client(["127.0.0.1:11211"])
-    value = mc.get('cake_' + cake_id)
+    mc = memcache.Client(["127.0.0.1:11211"])  # 可以设置多个ip+port，因为是分布式系统
+    value = mc.get('cake_' + cake_id)  # key为动态
     print(value)
     print(type(value))
     if value:
